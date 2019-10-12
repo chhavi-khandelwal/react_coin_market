@@ -1,0 +1,13 @@
+@import '../../shared/styles/_variables.scss';
+
+.coin-limiter {
+  align-self: flex-end;
+
+  select {
+    min-width: 120px;
+    height: 35px;
+    font-size: 1em;
+    outline: none;
+    margin-top: $base-spacing-unit;
+  }
+}

@@ -1,0 +1,79 @@
+@import '../../shared/styles/_variables.scss';
+@import '../../shared/styles/_placeholders.scss';
+@import '../../shared/styles/_mixins.scss';
+
+.crypto-container {
+  width: 100%;
+}
+
+.cryptolist {
+    display: grid;
+    grid-gap: 0.5em 1em;
+    padding-top: $base-spacing-unit;
+    @include anim-size-fade-in(0, auto);
+    animation: sizeFadeIn 1s ease-in-out;
+
+  li {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    padding: $base-spacing-unit / 2;
+    box-shadow: 0 0 2px -1px $color-gray-medium;
+
+    &:nth-child(odd) {
+      background-color: $color-gray;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    span {
+      justify-self: center;
+    }
+  }
+
+  &__item {
+    font-weight: $weight-light;
+    font-size: $font-small;
+  }
+
+  &__heading {
+    font-weight: $weight-bold;
+  }
+}
+
+.pagination {
+ @extend %flex;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: $base-spacing-unit / 4 $base-spacing-unit / 2;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: $color-purple;
+  background-color: $color-white;
+  font-weight: $weight-bold;
+  box-shadow: 0 0 1px 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.pagination>li.active>a {
+  color: $color-purple;
+  background-color: $color-gray;
+
+  &:hover {
+    background-color: $color-gray;
+  }
+}
+
+.pagination > li > a:hover {
+  background-color: $color-gray-light;
+}
+
+.hide {
+  display: none;
+}

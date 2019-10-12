@@ -1,0 +1,27 @@
+@import './shared/styles/_variables.scss';
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} 
+
+body {
+  text-rendering: optimizeLegibility;
+  font-size: $font-normal;
+  background-color: $color-gray-light;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}

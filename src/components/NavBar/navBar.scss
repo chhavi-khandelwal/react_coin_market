@@ -1,0 +1,33 @@
+@import '../../shared/styles/_variables.scss';
+@import '../../shared/styles/_placeholders.scss';
+
+nav {
+  margin-bottom: $base-spacing-unit;
+
+  ul {
+    font-weight: $weight-bold;
+    @extend %flex;
+  
+    li {
+      padding: $base-spacing-unit / 4;
+      margin: $base-spacing-unit / 4 $base-spacing-unit;
+    }
+  
+    a {
+      padding-bottom: $base-spacing-unit/ 4;
+      color: $color-purple;
+      border-bottom: 2px solid;
+      border-width: 0;
+      transition: border-width 0.1s ease-in-out;
+  
+      &:hover {
+        color: $color-purple-dark;
+  
+      }
+  
+      &.active {
+        border-bottom: 2px solid;
+      }
+    }
+  }
+}
